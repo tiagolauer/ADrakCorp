@@ -23,9 +23,14 @@ const Hero = () => {
           <div className="w-10 h-10 bg-adrak-primary rounded-lg flex items-center justify-center">
             <Bitcoin className="w-6 h-6 text-white" />
           </div>
-          <h1 className="text-xl md:text-2xl font-bold text-white">ADrak Corporation</h1>
+          <h1 className="text-xl md:text-2xl font-bold text-white">
+            ADrak Corporation
+          </h1>
         </div>
-        <Button className="bg-adrak-primary hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105">
+        <Button
+          className="bg-adrak-primary hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105"
+          onClick={() => window.open("https://wa.me/5547996823645", "_blank")}
+        >
           Entre em Contato
         </Button>
       </nav>
@@ -61,6 +66,9 @@ const Hero = () => {
               size="lg"
               variant="outline"
               className="border-2 border-adrak-secondary text-adrak-secondary hover:bg-adrak-secondary hover:text-black px-8 py-4 text-lg rounded-lg transition-all duration-300"
+              onClick={() =>
+                window.open("https://wa.me/5547996823645", "_blank")
+              }
             >
               Saiba Mais
             </Button>
