@@ -122,6 +122,7 @@ const Footer = () => {
                 <a
                   href="#"
                   className="text-gray-400 hover:text-adrak-primary transition-colors"
+                  onClick={e => { e.preventDefault(); window.open("https://wa.me/5547996823645", "_blank"); }}
                 >
                   Central de Ajuda
                 </a>
@@ -130,6 +131,7 @@ const Footer = () => {
                 <a
                   href="#"
                   className="text-gray-400 hover:text-adrak-primary transition-colors"
+                  onClick={e => { e.preventDefault(); window.open("https://wa.me/5547996823645", "_blank"); }}
                 >
                   Documentação
                 </a>
@@ -138,6 +140,7 @@ const Footer = () => {
                 <a
                   href="#"
                   className="text-gray-400 hover:text-adrak-primary transition-colors"
+                  onClick={e => { e.preventDefault(); window.open("https://wa.me/5547996823645", "_blank"); }}
                 >
                   Contato
                 </a>
@@ -146,6 +149,7 @@ const Footer = () => {
                 <a
                   href="#"
                   className="text-gray-400 hover:text-adrak-primary transition-colors"
+                  onClick={e => { e.preventDefault(); window.open("https://wa.me/5547996823645", "_blank"); }}
                 >
                   Status do Sistema
                 </a>
