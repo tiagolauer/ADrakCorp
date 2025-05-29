@@ -122,7 +122,10 @@ const Services = () => {
                   ))}
                 </div>
 
-                <Button className="w-full bg-adrak-primary hover:bg-green-600 text-white py-3 rounded-lg transition-all duration-300 hover:scale-105">
+                <Button
+                  className="w-full bg-adrak-primary hover:bg-green-600 text-white py-3 rounded-lg transition-all duration-300 hover:scale-105"
+                  onClick={() => window.open("https://wa.me/5547996823645", "_blank")}
+                >
                   Saiba Mais
                 </Button>
               </CardContent>
