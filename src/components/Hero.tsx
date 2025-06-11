@@ -1,14 +1,25 @@
 import { Button } from "@/components/ui/button"
 import { Bitcoin, Wallet, CreditCard } from "lucide-react"
+import React, { useState } from "react"
 
 const Hero = () => {
+  const [modalOpen, setModalOpen] = useState(false)
   const handleScrollToServices = () => {
     const servicesSection = document.getElementById("services")
     if (servicesSection) {
       servicesSection.scrollIntoView({ behavior: "smooth" })
     }
   }
-
+  const handleNotifyClick = () => {
+    setModalOpen(true)
+  }
+  const handleModalConfirm = () => {
+    setModalOpen(false)
+    window.open("https://forms.gle/BviLPofDyq3atFir8", "_blank")
+  }
+  const handleModalCancel = () => {
+    setModalOpen(false)
+  }
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
       {/* Background Pattern */}
@@ -66,14 +77,28 @@ const Hero = () => {
               size="lg"
               variant="outline"
               className="border-2 border-adrak-secondary text-adrak-secondary hover:bg-adrak-secondary hover:text-black px-8 py-4 text-lg rounded-lg transition-all duration-300"
-              onClick={() =>
-                window.open("https://wa.me/5547996823645", "_blank")
-              }
+              onClick={handleNotifyClick}
             >
-              Saiba Mais
+              Me avise!
             </Button>
           </div>
-
+          {/* Modal */}
+          {modalOpen && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+              <div className="bg-white rounded-lg p-8 max-w-sm w-full shadow-xl text-center">
+                <h2 className="text-xl font-bold mb-4 text-gray-900">Aviso</h2>
+                <p className="mb-6 text-gray-700">Você será encaminhado para um formulário criado pela equipe. Deseja continuar?</p>
+                <div className="flex justify-center gap-4">
+                  <Button className="bg-adrak-primary text-white px-6" onClick={handleModalConfirm}>
+                    Confirmar
+                  </Button>
+                  <Button variant="outline" className="border-adrak-secondary text-adrak-secondary px-6" onClick={handleModalCancel}>
+                    Cancelar
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
           {/* Feature Icons */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div className="flex flex-col items-center p-6 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
