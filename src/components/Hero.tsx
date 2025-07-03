@@ -24,10 +24,10 @@ const Hero = () => {
     <section
       className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden"
       style={{
-        backgroundImage: 'url(/Workstation%20ADrak.jpeg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        backgroundImage: "url(/Workstation%20ADrak.jpeg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
       }}
     >
       {/* Background Pattern */}
@@ -68,39 +68,32 @@ const Hero = () => {
             <span className="block text-adrak-primary">Cripto Nativas</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Desbloqueie o poder das criptomoedas com nosso ecossistema completo
-            de pagamentos, crédito e investimentos descentralizados.
-          </p>
+          <div className="mb-8" style={{ minHeight: "64px" }}></div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button
-              size="lg"
-              className="bg-adrak-primary hover:bg-green-600 text-white px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
-              onClick={handleScrollToServices}
-            >
-              Explore Nossos Serviços
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-adrak-secondary text-adrak-secondary hover:bg-adrak-secondary hover:text-black px-8 py-4 text-lg rounded-lg transition-all duration-300"
-              onClick={handleNotifyClick}
-            >
-              Me avise!
-            </Button>
+            {/* Espaço vazio para manter o espaçamento */}
           </div>
           {/* Modal */}
           {modalOpen && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
               <div className="bg-white rounded-lg p-8 max-w-sm w-full shadow-xl text-center">
                 <h2 className="text-xl font-bold mb-4 text-gray-900">Aviso</h2>
-                <p className="mb-6 text-gray-700">Você será encaminhado para um formulário criado pela equipe. Deseja continuar?</p>
+                <p className="mb-6 text-gray-700">
+                  Você será encaminhado para um formulário criado pela equipe.
+                  Deseja continuar?
+                </p>
                 <div className="flex justify-center gap-4">
-                  <Button className="bg-adrak-primary text-white px-6" onClick={handleModalConfirm}>
+                  <Button
+                    className="bg-adrak-primary text-white px-6"
+                    onClick={handleModalConfirm}
+                  >
                     Confirmar
                   </Button>
-                  <Button variant="outline" className="border-adrak-secondary text-adrak-secondary px-6" onClick={handleModalCancel}>
+                  <Button
+                    variant="outline"
+                    className="border-adrak-secondary text-adrak-secondary px-6"
+                    onClick={handleModalCancel}
+                  >
                     Cancelar
                   </Button>
                 </div>
@@ -139,6 +132,30 @@ const Hero = () => {
               </p>
             </div>
           </div>
+          {/* Nova sessão com texto e botões */}
+          <section className="mt-16 flex flex-col items-center justify-center">
+            <p className="text-xl md:text-2xl text-white text-center mb-6 max-w-3xl">
+              Desbloqueie o poder das criptomoedas com nosso ecossistema
+              completo de pagamentos, crédito e investimentos descentralizados.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-adrak-primary hover:bg-green-600 text-white px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                onClick={handleScrollToServices}
+              >
+                Explore Nossos Serviços
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-adrak-secondary text-adrak-secondary hover:bg-adrak-secondary hover:text-black px-8 py-4 text-lg rounded-lg transition-all duration-300"
+                onClick={handleNotifyClick}
+              >
+                Me avise!
+              </Button>
+            </div>
+          </section>
         </div>
       </div>
     </section>
